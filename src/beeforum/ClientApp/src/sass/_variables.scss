@@ -1,0 +1,19 @@
+@import '~bulma/sass/utilities/initial-variables';
+
+//general background color
+$box-background-color: whitesmoke;
+
+// mixins used by editor - start
+@mixin user-select($select) {
+  @each $pre in -webkit-, -moz-, -ms-, -o- {
+    #{$pre + user-select}: #{$select};
+  }
+  #{user-select}: #{$select};
+}
+
+@mixin text($family: $font--role-default, $size: 1rem, $weight: 300) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+}
+// currently used by editor - end
